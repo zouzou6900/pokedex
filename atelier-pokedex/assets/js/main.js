@@ -21,7 +21,39 @@ export async function generateWildList() {
             clearList.push(pokemon); 
         }
         localStorage.setItem("wildpkm", JSON.stringify(clearList));
+        displayWildList()
     })
 }
 
 generateWildList()
+
+function displayWildList() {
+    const pkmList = JSON.parse(localStorage.getItem('wildpkm'));
+    const pkmDisplay = document.querySelector('.wild-list');
+
+    let WildList ="";
+
+    for (const pkm of pkmList) {
+        WildList += `<tr>
+            <td>${pkm.pokedexId}</td>
+            <td>${pkm.name}</td>
+            <td>${pkm.type.map(t => t.name).join(", ")}</td>
+        </tr>`
+    }
+    pkmDisplay.innerHTML = `<table>
+        <thead>
+            <tr>
+                <th>Numéro</th>
+                <th>Nom</th>
+                <th>Types</th>
+            </tr>
+        </thead>
+        <tbody>
+            ${WildList}
+        </tbody>
+    </table>`
+}
+
+document.getElementById('reloadWildList').addEventListener('click', function(){
+    generateWildList()
+})
