@@ -134,5 +134,30 @@ body footer .user span.name {
   font-weight: bold;
   padding-bottom: 5px;
 }
+body .card {
+  background-color: gray;
+  width: 350px;
+  border-radius: 1rem;
+}
+body .card .container-img {
+  display: flex;
+  justify-content: center;
+}
+body .card ul {
+  display: flex;
+  background-color: #fff;
+  border-radius: 1rem;
+}
+body .card li {
+  list-style-type: none;
+}
+body .card p {
+  display: inline;
+  justify-content: end;
+}
+body .card .speed {
+  display: flex;
+  margin-right: 24px;
+}
 
 /*# sourceMappingURL=style.css.map */
