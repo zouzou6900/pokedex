@@ -1,8 +1,9 @@
+//import WildList from "./components/wild-list.js";
 export function randomNumber(max){
     return Math.floor(Math.random() * (max + 1));
 }
 
-export async function generateWildList() {
+export function generateWildList() {
     fetch("https://pokebuildapi.fr/api/v1/pokemon")
     .then((response) => response.json())
     .then((data) => {
@@ -21,13 +22,10 @@ export async function generateWildList() {
             clearList.push(pokemon); 
         }
         localStorage.setItem("wildpkm", JSON.stringify(clearList));
-        displayWildList()
     })
 }
 
-generateWildList()
-
-function displayWildList() {
+/* function displayWildList() {
     const pkmList = JSON.parse(localStorage.getItem('wildpkm'));
     const pkmDisplay = document.querySelector('.wild-list');
 
@@ -52,8 +50,5 @@ function displayWildList() {
             ${WildList}
         </tbody>
     </table>`
-}
+} */
 
-document.getElementById('reloadWildList').addEventListener('click', function(){
-    generateWildList()
-})
