@@ -2,7 +2,7 @@ export default class Header extends HTMLElement {
   connectedCallback() {
     const current = this.getAttribute('current');
     this.innerHTML = `<header>
-      <div class="logo"><img src="public/img/logo-banner.png" alt="logo pokemon"></div>
+      <a href="./" class="logo"><img src="public/img/logo-banner.png" alt="logo pokemon"></a>
       <nav>
         <ul>
             <li><a style="color: ${

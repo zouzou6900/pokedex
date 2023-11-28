@@ -4,19 +4,22 @@
       "name": "Amaury",
       "catch": 0,
       "escape": 0,
-      "id": 1
+      "id": 1,
+      "img" : "./public/img/bulbizarre.png"
     },
     {
       "name": "Steve",
       "catch": 0,
       "escape": 0,
-      "id": 2
+      "id": 2,
+      "img" : "./public/img/salameche.png"
     },
     {
       "name": "Amand",
       "catch": 0,
       "escape": 0,
-      "id": 3
+      "id": 3,
+      "img" : "./public/img/carapuce.png"
     }
   ],
   "pokemons": [

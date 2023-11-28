@@ -1,5 +1,6 @@
 body {
   background-image: url('../../public/img/background.jpg');
+  background-attachment: fixed;
   font-family: arial, Helvetica, sans-serif;
   margin:0;
  
@@ -57,7 +58,7 @@ body {
           display: flex;
           align-items: center;
           justify-content: end;
-          font-size: 14px;
+          font-size: 18px;
           .catch {
             background-color: green;
             color: white;
@@ -81,9 +82,10 @@ body {
       padding: 10px 20px;
       display:block;
       width:980px;
-      margin:50px auto;
+      margin:75px auto 50px auto;
       border-radius: 25px;
       padding:25px 25px;
+      box-shadow: 0px 0px 30px black;
       table{
         border-spacing:1px;
         width:100%;
@@ -106,9 +108,20 @@ body {
         background-color: #efefef;
         tr{
           cursor: pointer;
+          &.lighter-bg{
+            background-color: #efefef;
+          }
+          &.darker-bg{
+            background-color: #ddd;
+          }
           td{
-            padding:20px;
+            line-height:35px;
+            padding: 10px;
             text-align: left;
+            img{
+              float: left;
+              margin-right: 5px;
+            }
             
             &:last-child{
               border-right: 0;
@@ -122,26 +135,74 @@ body {
       }
     }
     }
-    footer {
-      padding: 30px;
-      display: flex;
-      justify-content: center;
+    button.refreshList{
+      display: block;
+      position:absolute;
+      right:50%;
+      transform: translate(50%);
+      padding: 10px 25px;
+      background:#ffcb08;
+      border: 8px solid #fff;
+      top:143px;
+      border-radius: 25px 25px 0 0;
+      border-bottom:0;
+      z-index: 0;
+      cursor: pointer;
+      &:hover{
+        background:#ffab08;
+      }
+      .refresh-img{
+        width: 30px;
+      }
+
+    }
+    main-footer{
       background: #003da1;
+      display:block;
+    footer {
+      padding: 25px;
+      display: flex;
+      width:980px;
+      justify-content: center;
+      margin:0 auto;
       color: white;
-      border-radius: 0 0 25px 25px;
       justify-content:space-evenly;
-      .user{
-        width:25%;
-        span{
-          display: block;
-          line-height: 25px;;
-          &.name{
-            text-transform: uppercase;
-            font-weight: bold;
-            padding-bottom: 5px;
+      div{
+        width:21%;
+        img{
+          width:100px;
+        }
+      }
+      .users{
+        display: flex;
+        width:79%;
+        div{
+          width:33%;
+        }
+        .userCard{
+          text-transform: uppercase;
+          color:#ffcb08;
+          position:relative;
+          
+          img{
+            float: left;
+            width:35px;
+            margin-right:15px;
+            position: absolute;
+            left:-45px;
+            top:0px;
+          }
+          h4{
+            margin:10px 0 10px 0;
+            
+          }
+          .nbrPkm{
+            text-transform: none;
+            color:white;
           }
         }
       }
     }
   }
+}
   
