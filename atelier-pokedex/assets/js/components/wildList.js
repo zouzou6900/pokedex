@@ -5,21 +5,14 @@ export default class WildList extends HTMLElement {
     let WildList = '';
 
     for (const pkm of pkmList) {
-      if (length % 2) {
-        WildList += `<tr class="darker-bg">
-                            <td>${pkm.pokedexId}</td>
-                            <td><img src=${pkm.sprite} style="height:32px;">${
-          pkm.name
-        }</td>
-                            <td>${pkm.type.map((t) => t.name).join(', ')}</td>
-                        </tr>`;
-      } else {
-        WildList += `<tr class="lighter-bg">
-                <td>${pkm.pokedexId}</td>
-                <td><img src=${pkm.sprite} style="height:32px;">${pkm.name}</td>
-                <td>${pkm.type.map((t) => t.name).join(', ')}</td>
-            </tr>`;
-      }
+      const bgColorClass = length % 2 ? 'darker-bg' : 'lighter-bg';
+      WildList += `
+  <tr class="${bgColorClass}">
+    <td>${pkm.pokedexId}</td>
+    <td><img src=${pkm.sprite} style="height:32px;">${pkm.name}</td>
+    <td>${pkm.type.map((t) => t.name).join(', ')}</td>
+  </tr>
+`;
       length += 1;
     }
     this.innerHTML = `<table>
