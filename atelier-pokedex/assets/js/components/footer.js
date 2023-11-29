@@ -18,8 +18,7 @@ export default class Footer extends HTMLElement {
           <footer>
               <div><img src="./public/img/pikachu.png" alt="Pikachu" /></div>
               <div class="users">
-                  ${users}
-                  
+                  ${users}   
               </div>
           </footer>`;
     }
