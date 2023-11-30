@@ -213,30 +213,28 @@ main-footer footer .users .userCard .nbrPkm {
 main-footer footer .users .userCard:hover {
   background-color: #ccc;
 }
-main-footer .card {
+main-footer .pokedex {
+  display: block;
+  flex-wrap: wrap;
+  width: 350px;
+}
+main-footer .pokedex .pokemonCard {
   background-color: gray;
   width: 350px;
+  height: 350px;
   border-radius: 1rem;
+  display: block;
 }
-main-footer .card .container-img {
+main-footer .pokedex .pokemonCard .title {
+  display: flex;
+}
+main-footer .pokedex .pokemonCard .container-img {
   display: flex;
   justify-content: center;
 }
-main-footer .card ul {
+main-footer .pokedex .pokemonCard .speed {
   display: flex;
-  background-color: #fff;
-  border-radius: 1rem;
-}
-main-footer .card li {
-  list-style-type: none;
-}
-main-footer .card p {
-  display: inline;
   justify-content: end;
-}
-main-footer .card .speed {
-  display: flex;
-  margin-right: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */
