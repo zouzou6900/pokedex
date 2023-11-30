@@ -57,4 +57,18 @@ export function displayCaptureModal(event){
 
     modalContainer.innerHTML= captureMarkUp;
     body.appendChild(modalContainer);
+
+    document.getElementById('btn-back').addEventListener('click',(event)=>{
+        event.target.parentNode.parentNode.parentNode.remove();
+    })
+
+    document.getElementById('btn-capture').addEventListener('click',()=>{
+        capturePokemon(pkmIndex, pkmData);
+    })
+}
+
+function capturePokemon(event,pkmIndex,pkmData){
+    const user = ""
+    const pokemon = pkmData;
+    
 }

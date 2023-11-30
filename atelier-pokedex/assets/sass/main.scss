@@ -3,12 +3,9 @@ body {
   background-attachment: fixed;
   font-family: arial, Helvetica, sans-serif;
   margin:0;
-<<<<<<< HEAD
-=======
   position:relative;
   height: 100vh;
   
->>>>>>> steve
  
       header {
         display: flex;
@@ -97,7 +94,6 @@ body {
         width:100%;
         
         
-<<<<<<< HEAD
         thead{
           background-color: #ffcb08;
           th{
@@ -127,18 +123,6 @@ body {
             &:hover{
               background-color: #ccc;
             }
-=======
-      thead{
-        background-color: #ffcb08;
-        th{
-          padding:20px;
-          text-align: left;
-          &:first-child{
-            border-radius: 20px 0 0 0;
-          }
-          &:last-child{
-            border-radius: 0 20px 0 0;
->>>>>>> steve
           }
         }
       }
@@ -196,11 +180,6 @@ body {
       }
 
     }
-<<<<<<< HEAD
-    main-footer{
-      background: #003da1;
-      display:block;
-=======
 
     main-history{
       background: white;
@@ -253,7 +232,6 @@ body {
       position: fixed;
       bottom:0;
       width:100%;
->>>>>>> steve
     footer {
       padding: 25px;
       display: flex;
@@ -271,28 +249,20 @@ body {
       .users{
         display: flex;
         width:79%;
-<<<<<<< HEAD
-        div{
-          width:33%;
-=======
        
         a{
           width:33%;
           text-decoration: none;
           
->>>>>>> steve
         }
         .userCard{
           text-transform: uppercase;
           color:#ffcb08;
           position:relative;
-<<<<<<< HEAD
-=======
           &:hover{
             background-color: #003da1 !important;
           }
           
->>>>>>> steve
           
           img{
             float: left;
@@ -316,36 +286,6 @@ body {
          }
       }
     }
-<<<<<<< HEAD
-    .pokemonCard {
-      background-color: gray;
-      width: 350px;
-      border-radius: 1rem;
-      display: flex;
-      .container-img{
-        display: flex;
-        justify-content: center;
-      }
-      ul{
-        display:flex;
-        background-color: #fff;
-        border-radius: 1rem;
-      }
-      li{
-        list-style-type: none;
-      }
-      p{
-        display: inline;
-        justify-content: end;
-      }
-      .speed{
-        display: flex;
-        margin-right: 24px;
-      }
-    }
   }
-=======
-  }
-}
+
   
->>>>>>> steve
