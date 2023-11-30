@@ -2,6 +2,7 @@
   "users": [
     {
       "name": "Amaury",
+      "img": "./public/img/bulbizarre.png",
       "catch": 0,
       "escape": 0,
       "id": 1,
@@ -9,6 +10,7 @@
     },
     {
       "name": "Steve",
+      "img": "./public/img/salameche.png",
       "catch": 0,
       "escape": 0,
       "id": 2,
@@ -16,6 +18,7 @@
     },
     {
       "name": "Amand",
+      "img": "./public/img/carapuce.png",
       "catch": 0,
       "escape": 0,
       "id": 3,

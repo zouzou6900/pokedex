@@ -105,15 +105,26 @@ body wild-list table tbody {
 body wild-list table tbody tr {
   cursor: pointer;
 }
+body wild-list table tbody tr.lighter-bg {
+  background-color: #efefef;
+}
+body wild-list table tbody tr.darker-bg {
+  background-color: #ddd;
+}
 body wild-list table tbody tr td {
-  padding: 20px;
+  line-height: 35px;
+  padding: 10px;
   text-align: left;
+}
+body wild-list table tbody tr td img {
+  float: left;
+  margin-right: 5px;
 }
 body wild-list table tbody tr td:last-child {
   border-right: 0;
 }
 body wild-list table tbody tr:hover {
-  background-color: #ccc;
+  background-color: rgba(255, 203, 8, 0.3);
 }
 body wild-list tbody {
   background-color: #efefef;

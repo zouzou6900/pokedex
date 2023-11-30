@@ -1,5 +1,5 @@
 import Footer from './components/footer.js';
-import WildList from './components/wildList.js';
+import WildList from './components/wild-list.js';
 import Header from './components/header.js';
 import Pokedex from './components/pokedex.js';
 

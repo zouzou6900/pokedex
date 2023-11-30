@@ -1,8 +1,11 @@
+
 export function randomNumber(max){
     return Math.floor(Math.random() * (max + 1));
 }
 
-export async function generateWildList() {
+export function generateWildList() {
+    const isWildListStored = JSON.parse(localStorage.getItem('wildList'));
+    
     fetch("https://pokebuildapi.fr/api/v1/pokemon")
     .then((response) => response.json())
     .then((data) => {
@@ -20,8 +23,26 @@ export async function generateWildList() {
             }
             clearList.push(pokemon); 
         }
-        localStorage.setItem("wildpkm", JSON.stringify(clearList));
+        if(!isWildListStored){
+            localStorage.setItem("wildList", JSON.stringify(clearList));
+            generateWildList()
+        }
+
+        if(isWildListStored){
+            localStorage.setItem("wildTemp", JSON.stringify(clearList));
+        }
     })
 }
 
-generateWildList()
+export function swapStorage(){
+    const test2 = JSON.parse(localStorage.getItem('wildTemp'));
+    localStorage.setItem("wildList", JSON.stringify(test2));
+    generateWildList()
+}
+
+export function displayCaptureModal(event){
+    const pkmIndex = event.target.parentNode.getAttribute('index');
+    const pkmData = JSON.parse(localStorage.getItem('wildList'))[pkmIndex];
+    
+    console.log(pkmData);
+}
