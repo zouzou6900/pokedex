@@ -317,30 +317,32 @@ body {
       }
     }
 <<<<<<< HEAD
+    .pokedex{
+      display: block;
+      flex-wrap: wrap;
+=======
+<<<<<<< HEAD
     .pokemonCard {
       background-color: gray;
+>>>>>>> main
       width: 350px;
-      border-radius: 1rem;
-      display: flex;
-      .container-img{
-        display: flex;
-        justify-content: center;
-      }
-      ul{
-        display:flex;
-        background-color: #fff;
+      .pokemonCard {
+        background-color: gray;
+        width: 350px;
+        height: 350px;
         border-radius: 1rem;
-      }
-      li{
-        list-style-type: none;
-      }
-      p{
-        display: inline;
-        justify-content: end;
-      }
-      .speed{
-        display: flex;
-        margin-right: 24px;
+        display: block;
+        .title{
+          display: flex;
+        }
+        .container-img{
+          display: flex;
+          justify-content: center;
+        }   
+        .speed{
+          display: flex;
+          justify-content: end;
+        }
       }
     }
   }
