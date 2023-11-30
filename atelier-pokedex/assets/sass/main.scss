@@ -227,10 +227,11 @@ body {
          }
       }
     }
-    .cards {
+    .pokemonCard {
       background-color: gray;
       width: 350px;
       border-radius: 1rem;
+      display: flex;
       .container-img{
         display: flex;
         justify-content: center;
