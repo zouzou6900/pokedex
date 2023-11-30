@@ -3,6 +3,9 @@ body {
   background-attachment: fixed;
   font-family: arial, Helvetica, sans-serif;
   margin:0;
+  position:relative;
+  height: 100vh;
+  
  
       header {
         display: flex;
@@ -158,9 +161,58 @@ body {
       }
 
     }
+
+    main-history{
+      background: white;
+      padding: 10px 20px;
+      display:block;
+      width:980px;
+      margin:50px auto 50px auto;
+      border-radius: 25px;
+      padding:25px 25px;
+      box-shadow: 0px 0px 30px black;
+      .history-table{
+        background-color: white;
+        width:100%;
+        border-spacing:1px;
+        width:100%;
+        font-size:12px;
+        thead{
+        th{
+          background:#ffcb08;
+          line-height:35px;
+            padding: 0px 10px;
+            text-align: left;
+            &:first-child{
+              border-radius: 15px 0 0 0;
+            }
+            &:last-child{
+              border-radius: 0 15px 0 0;
+            }
+        }
+      }
+      tbody{
+        background-color: #ccc;
+        tr{
+          
+          cursor: pointer;
+          
+        td{
+          
+          line-height:35px;
+            padding: 0px 10px;
+            text-align: left;
+        }
+      }
+      }
+      }
+    }
     main-footer{
       background: #003da1;
       display:block;
+      position: fixed;
+      bottom:0;
+      width:100%;
     footer {
       padding: 25px;
       display: flex;
@@ -178,13 +230,20 @@ body {
       .users{
         display: flex;
         width:79%;
-        div{
+       
+        a{
           width:33%;
+          text-decoration: none;
+          
         }
         .userCard{
           text-transform: uppercase;
           color:#ffcb08;
           position:relative;
+          &:hover{
+            background-color: #003da1 !important;
+          }
+          
           
           img{
             float: left;
