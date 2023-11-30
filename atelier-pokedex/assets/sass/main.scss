@@ -4,7 +4,7 @@ body {
   font-family: arial, Helvetica, sans-serif;
   margin:0;
   position:relative;
-  height: 100vh;
+  min-height: 100vh;
   
  
       header {
@@ -85,10 +85,11 @@ body {
       padding: 10px 20px;
       display:block;
       width:980px;
-      margin:75px auto 50px auto;
+      margin:75px auto 150px auto;
       border-radius: 25px;
       padding:25px 25px;
       box-shadow: 0px 0px 30px black;
+      margin-bottom:200px;
       table{
         border-spacing:1px;
         width:100%;
@@ -140,6 +141,52 @@ body {
       }
     }
     }
+
+    .captureModal{
+      position:fixed;
+      padding:30px;
+      background:white;
+      top:15%;
+      right:50%;
+      transform: translate(50%);
+      width:auto;
+      border-radius: 25px;
+      box-shadow: 0px 0px 30px black;
+      text-align: center;
+      p{
+        background-color: #ddd;
+        padding:10px;
+        text-align: center;
+        margin: 0;
+        border-radius: 10px;
+        &:first-child{
+          background-color: lightgreen;
+        }
+      }
+      img{
+        max-width: 400px;
+      }
+      #btn-back{
+        border: 0;
+        color: lightcoral;
+       margin-top:10px;
+       font-size:45px;
+       background-color: white;
+      }
+      #btn-capture{
+        border: 0;
+        color: lightcoral;
+       
+       font-size:45px;
+       background-color: white;
+       width:45px;
+       img{
+        width:47px;
+        margin-top:10px;
+       }
+      }
+    }
+
     button.refreshList{
       display: block;
       position:absolute;
@@ -192,7 +239,7 @@ body {
         }
       }
       tbody{
-        background-color: #ccc;
+        background-color: #eee;
         tr{
           
           cursor: pointer;

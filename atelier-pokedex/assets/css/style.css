@@ -4,7 +4,7 @@ body {
   font-family: arial, Helvetica, sans-serif;
   margin: 0;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
 }
 body header {
   display: flex;
@@ -79,10 +79,11 @@ body wild-list {
   padding: 10px 20px;
   display: block;
   width: 980px;
-  margin: 75px auto 50px auto;
+  margin: 75px auto 150px auto;
   border-radius: 25px;
   padding: 25px 25px;
   box-shadow: 0px 0px 30px black;
+  margin-bottom: 200px;
 }
 body wild-list table {
   border-spacing: 1px;
@@ -127,6 +128,49 @@ body wild-list table tbody tr td:last-child {
 }
 body wild-list table tbody tr:hover {
   background-color: rgba(255, 203, 8, 0.3);
+}
+body .captureModal {
+  position: fixed;
+  padding: 30px;
+  background: white;
+  top: 15%;
+  right: 50%;
+  transform: translate(50%);
+  width: auto;
+  border-radius: 25px;
+  box-shadow: 0px 0px 30px black;
+  text-align: center;
+}
+body .captureModal p {
+  background-color: #ddd;
+  padding: 10px;
+  text-align: center;
+  margin: 0;
+  border-radius: 10px;
+}
+body .captureModal p:first-child {
+  background-color: lightgreen;
+}
+body .captureModal img {
+  max-width: 400px;
+}
+body .captureModal #btn-back {
+  border: 0;
+  color: lightcoral;
+  margin-top: 10px;
+  font-size: 45px;
+  background-color: white;
+}
+body .captureModal #btn-capture {
+  border: 0;
+  color: lightcoral;
+  font-size: 45px;
+  background-color: white;
+  width: 45px;
+}
+body .captureModal #btn-capture img {
+  width: 47px;
+  margin-top: 10px;
 }
 body button.refreshList {
   display: block;
@@ -178,7 +222,7 @@ body main-history .history-table thead th:last-child {
   border-radius: 0 15px 0 0;
 }
 body main-history .history-table tbody {
-  background-color: #ccc;
+  background-color: #eee;
 }
 body main-history .history-table tbody tr {
   cursor: pointer;
