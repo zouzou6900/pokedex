@@ -14,7 +14,7 @@ export function generateWildList() {
             const rand = randomNumber(898);
             const pokemonData = data[rand];
             const pokemon = {
-                "pokedexId": pokemonData.id,
+                "pokedexId": pokemonData.pokedexId,
                 "name" : pokemonData.name,
                 "type": pokemonData.apiTypes,
                 "stats" : pokemonData.stats,
@@ -43,6 +43,18 @@ export function swapStorage(){
 export function displayCaptureModal(event){
     const pkmIndex = event.target.parentNode.getAttribute('index');
     const pkmData = JSON.parse(localStorage.getItem('wildList'))[pkmIndex];
-    
-    console.log(pkmData);
+    const body = document.querySelector('body');
+    const modalContainer = document.createElement('div');
+    modalContainer.classList.add('captureModal');
+    modalContainer.setAttribute('index',`${pkmIndex}`);
+    const captureMarkUp = `<p>Un ${pkmData.name} sauvage apparait !</p>
+    <div><img src="${pkmData.image}"</div>
+    <p id="modal-msg">Voulez-vous tenter de le capturer ?</p>
+    <div>
+        <button id="btn-back">btnback</button>
+        <button id="btn-capture">btncapture</button>
+    </div>`
+
+    modalContainer.innerHTML= captureMarkUp;
+    body.appendChild(modalContainer);
 }
