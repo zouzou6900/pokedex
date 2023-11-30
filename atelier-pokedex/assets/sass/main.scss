@@ -3,6 +3,12 @@ body {
   background-attachment: fixed;
   font-family: arial, Helvetica, sans-serif;
   margin:0;
+<<<<<<< HEAD
+=======
+  position:relative;
+  height: 100vh;
+  
+>>>>>>> steve
  
       header {
         display: flex;
@@ -91,6 +97,7 @@ body {
         width:100%;
         
         
+<<<<<<< HEAD
         thead{
           background-color: #ffcb08;
           th{
@@ -120,6 +127,18 @@ body {
             &:hover{
               background-color: #ccc;
             }
+=======
+      thead{
+        background-color: #ffcb08;
+        th{
+          padding:20px;
+          text-align: left;
+          &:first-child{
+            border-radius: 20px 0 0 0;
+          }
+          &:last-child{
+            border-radius: 0 20px 0 0;
+>>>>>>> steve
           }
         }
       }
@@ -177,9 +196,64 @@ body {
       }
 
     }
+<<<<<<< HEAD
     main-footer{
       background: #003da1;
       display:block;
+=======
+
+    main-history{
+      background: white;
+      padding: 10px 20px;
+      display:block;
+      width:980px;
+      margin:50px auto 50px auto;
+      border-radius: 25px;
+      padding:25px 25px;
+      box-shadow: 0px 0px 30px black;
+      .history-table{
+        background-color: white;
+        width:100%;
+        border-spacing:1px;
+        width:100%;
+        font-size:12px;
+        thead{
+        th{
+          background:#ffcb08;
+          line-height:35px;
+            padding: 0px 10px;
+            text-align: left;
+            &:first-child{
+              border-radius: 15px 0 0 0;
+            }
+            &:last-child{
+              border-radius: 0 15px 0 0;
+            }
+        }
+      }
+      tbody{
+        background-color: #ccc;
+        tr{
+          
+          cursor: pointer;
+          
+        td{
+          
+          line-height:35px;
+            padding: 0px 10px;
+            text-align: left;
+        }
+      }
+      }
+      }
+    }
+    main-footer{
+      background: #003da1;
+      display:block;
+      position: fixed;
+      bottom:0;
+      width:100%;
+>>>>>>> steve
     footer {
       padding: 25px;
       display: flex;
@@ -197,13 +271,28 @@ body {
       .users{
         display: flex;
         width:79%;
+<<<<<<< HEAD
         div{
           width:33%;
+=======
+       
+        a{
+          width:33%;
+          text-decoration: none;
+          
+>>>>>>> steve
         }
         .userCard{
           text-transform: uppercase;
           color:#ffcb08;
           position:relative;
+<<<<<<< HEAD
+=======
+          &:hover{
+            background-color: #003da1 !important;
+          }
+          
+>>>>>>> steve
           
           img{
             float: left;
@@ -227,6 +316,7 @@ body {
          }
       }
     }
+<<<<<<< HEAD
     .pokemonCard {
       background-color: gray;
       width: 350px;
@@ -254,3 +344,8 @@ body {
       }
     }
   }
+=======
+  }
+}
+  
+>>>>>>> steve
