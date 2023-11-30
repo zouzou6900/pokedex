@@ -14,7 +14,7 @@ export function generateWildList() {
             const rand = randomNumber(898);
             const pokemonData = data[rand];
             const pokemon = {
-                "pokedexId": pokemonData.pokedexId,
+                "pokedexId": pokemonData.id,
                 "name" : pokemonData.name,
                 "type": pokemonData.apiTypes,
                 "stats" : pokemonData.stats,

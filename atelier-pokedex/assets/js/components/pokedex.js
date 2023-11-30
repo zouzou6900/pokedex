@@ -27,7 +27,7 @@ export default class Pokedex extends HTMLElement {
                   "ownerId": 3
         }
         this.innerHTML =  `
-                        <div class="card">
+                        <div class="cards">
                             <ul>
                                 <li class="idPokemon">${test.pokedexId}</li>
                                 <li class="name">${test.name}</li>
