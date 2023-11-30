@@ -1,5 +1,5 @@
-import { generateWildList } from "../main.js";
-import { swapStorage } from "../main.js";
+import { generateWildList, swapStorage, displayCaptureModal } from "../main.js";
+
 export default class WildList extends HTMLElement {
     connectedCallback() {
 
@@ -26,22 +26,27 @@ export default class WildList extends HTMLElement {
         const listExist = JSON.parse(localStorage.getItem('wildList'));
         if(!listExist) return generateWildList()
         if(listExist) swapStorage()
-           const pkmList = JSON.parse(localStorage.getItem('wildList'));
-           
-           const e = document.querySelector('.wildListBody');
-           let length = 0;
-           let WildList = '';
+        const pkmList = JSON.parse(localStorage.getItem('wildList'));
         
-           for (const pkm of pkmList) {
-               const bgColorClass = length % 2 ? 'darker-bg' : 'lighter-bg';
-               WildList += `<tr class="${bgColorClass}">
-                       <td>${pkm.pokedexId}</td>
-                       <td><img src=${pkm.sprite} style="height:32px;">${pkm.name}</td>
-                       <td>${pkm.type.map((t) => t.name).join(', ')}</td>
-                   </tr>`;
-               length += 1;
-           }
+        const tabBody = document.querySelector('.wildListBody');
+        let length = 0;
+        let WildList = '';
     
-           e.innerHTML = WildList;
+        for (const [index,pkm] of pkmList.entries()) {
+            const bgColorClass = length % 2 ? 'darker-bg' : 'lighter-bg';
+            WildList += `<tr class="${bgColorClass} wildPkmRow" index="${index}">
+                    <td>${pkm.pokedexId}</td>
+                    <td><img src=${pkm.sprite} style="height:32px;">${pkm.name}</td>
+                    <td>${pkm.type.map((t) => t.name).join(', ')}</td>
+                </tr>`;
+            length += 1;
+        }
+
+        tabBody.innerHTML = WildList;
+        document.querySelectorAll('.wildPkmRow').forEach(row => {
+            row.addEventListener('click', (event)=>{
+                displayCaptureModal(event)
+            })
+        });
     }
 }
