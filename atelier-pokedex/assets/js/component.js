@@ -7,5 +7,5 @@ import Pokedex from './components/pokedex.js';
 customElements.define('main-footer', Footer);
 customElements.define('wild-list', WildList);
 customElements.define('main-header', Header);
-customElements.define('main-history', History);
 customElements.define('main-card',Pokedex);
+customElements.define('main-history', History);

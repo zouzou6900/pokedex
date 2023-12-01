@@ -166,9 +166,53 @@ button.refreshList .refresh-img {
   width: 30px;
 }
 
+main-history {
+  background: white;
+  padding: 10px 20px;
+  display: block;
+  width: 980px;
+  margin: 50px auto 50px auto;
+  border-radius: 25px;
+  padding: 25px 25px;
+  box-shadow: 0px 0px 30px black;
+}
+main-history .history-table {
+  background-color: white;
+  width: 100%;
+  border-spacing: 1px;
+  width: 100%;
+  font-size: 12px;
+}
+main-history .history-table thead th {
+  background: #ffcb08;
+  line-height: 35px;
+  padding: 0px 10px;
+  text-align: left;
+}
+main-history .history-table thead th:first-child {
+  border-radius: 15px 0 0 0;
+}
+main-history .history-table thead th:last-child {
+  border-radius: 0 15px 0 0;
+}
+main-history .history-table tbody {
+  background-color: #ccc;
+}
+main-history .history-table tbody tr {
+  cursor: pointer;
+}
+main-history .history-table tbody tr td {
+  line-height: 35px;
+  padding: 0px 10px;
+  text-align: left;
+}
+
 main-footer {
   background: #003da1;
   display: block;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 main-footer footer {
   padding: 25px;
