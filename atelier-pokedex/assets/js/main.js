@@ -69,12 +69,17 @@ export function displayCaptureModal(event) {
 export function handleUserSelectedEvent(event) {
   const activeUser = event.detail;
   console.log('Utilisateur actif dans main.js :', activeUser);
-
+  localStorage.setItem('activeUser', activeUser);
   const userHeader = document.getElementById('activeUserDisplay');
-  userHeader.innerHTML = `
-    Salut ${activeUser}`;
+  userHeader.innerHTML = `<img src="./public/img/${activeUser}.png" alt="" />`;
 }
-
 document
   .querySelector('main-footer')
   .addEventListener('userSelected', handleUserSelectedEvent);
+document.addEventListener('DOMContentLoaded', () => {
+  const storedActiveUser = localStorage.getItem('activeUser');
+  if (storedActiveUser) {
+    const userHeader = document.getElementById('activeUserDisplay');
+    userHeader.innerHTML = `<img src="./public/img/${storedActiveUser}.png" alt="" />`;
+  }
+});

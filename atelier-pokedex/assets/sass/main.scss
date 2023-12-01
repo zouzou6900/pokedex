@@ -11,6 +11,8 @@ body {
         display: flex;
         background: #000;
         padding:30px;
+        border-bottom:3px solid #ffcb08;
+        box-shadow: 0px 0px 30px black;
         #activeUserDisplay{
           color:white;
         }
@@ -18,7 +20,7 @@ body {
           width: 18%;
         }
         nav {
-          width: 77%;
+          width: 64%;
           text-align: center;
           ul {
             list-style-type: none;
@@ -32,7 +34,7 @@ body {
                 text-decoration: none;
                 text-transform: uppercase;
                 font-family: 'Arial Narrow Bold', sans-serif;
-                padding: 56px 10px;
+                padding: 30px 10px;
                 color: #fff;
                 transition: ease-in-out 0.2s;
                 font-size: 15px;
@@ -51,7 +53,7 @@ body {
                   width: 0;
                   height: 5px;
                   background-color: transparent;
-                  transition: width 0.1s ease-in-out;
+                  transition: width 0.2s ease-in-out;
                 }
               }
               
@@ -60,25 +62,34 @@ body {
         }
 
         .counter {
-          width: 5%;
+          width: 18%;
           display: flex;
           align-items: center;
           justify-content: end;
           font-size: 18px;
+          font-weight:bold;
+          #activeUserDisplay{
+            text-align: left;
+            display:block;
+            margin-right: 10px;
+            img{
+              width:45px;
+            }
+          }
           .catch {
-            background-color: green;
-            color: white;
-
-            border-radius: 30px;
-            padding: 5px;
+            background-color: #ffcb08;
+            color: black;
+            border-radius: 10px 0 0 10px;
+            padding: 6px 10px;
             margin: 0;
+            
           }
           .notCatch {
-            background-color: red;
-            color: white;
-            border-radius: 30px;
-            padding: 5px;
-            margin-left: 5px;
+            background-color: #7c6100;
+            color: black;
+            border-radius: 0 10px 10px 0;
+            padding: 5px 9px;
+            border: 1px solid #ffcb08;
           }}
         
       
@@ -212,7 +223,7 @@ body {
       padding: 10px 25px;
       background:#ffcb08;
       border: 8px solid #fff;
-      top:143px;
+      top:145px;
       border-radius: 25px 25px 0 0;
       border-bottom:0;
       z-index: 0;

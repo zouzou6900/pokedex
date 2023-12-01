@@ -45,6 +45,8 @@ export default class WildList extends HTMLElement {
     tabBody.innerHTML = WildList;
     document.querySelectorAll('.wildPkmRow').forEach((row) => {
       row.addEventListener('click', (event) => {
+        const isModalOpen = document.querySelector('.captureModal');
+        if (isModalOpen) return;
         displayCaptureModal(event);
       });
     });

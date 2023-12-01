@@ -33,6 +33,7 @@ export default class Footer extends HTMLElement {
       const activeUserCard = this.querySelector(
         `.userCard[data-username="${activeUser}"]`,
       );
+
       if (activeUserCard) {
         activeUserCard.classList.add('currentUser');
       }
