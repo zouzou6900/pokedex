@@ -270,6 +270,7 @@ main-footer footer .users .userCard .nbrPkm {
   width: 50px;
   display: flex;
   justify-content: space-between;
+  margin-top: 2px;
 }
 .pokedex .pokemonCard .favoris {
   width: auto;
@@ -279,8 +280,8 @@ main-footer footer .users .userCard .nbrPkm {
 }
 .pokedex .pokemonCard .delete {
   width: auto;
-  height: 15px;
-  margin-top: 1px;
+  height: 19px;
+  margin-top: -2px;
 }
 .pokedex .pokemonCard .speed {
   position: absolute;

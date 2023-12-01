@@ -37,9 +37,6 @@ export default class Pokedex extends HTMLElement {
     } 
 }
 
-
-
-
 function changementImg(event){
   event.target.classList.toggle('active')
   if (event.target.classList.contains('active')) {
