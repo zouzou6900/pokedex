@@ -5,24 +5,25 @@ export default class Pokedex extends HTMLElement {
             return data
               .map((pokemon) => {
                 return `
+                      <div class="pokemonCard">
                         <div class="title">
-                          <p>${pokemon.pokedexId}</p>
-                          <p>${pokemon.name}</p>
-                          <img></img>
-                          <img></img>
-                          <img src=${pokemon.image} style="height:64px;">
+                          <p class="id-pokemon">${pokemon.pokedexId}</p>
+                          <p class="name-pokemon">${pokemon.name}</p>
+                          <img class="favoris" src="./public/img/favoris.png" >
+                          <img class="delete" src="./public/img/delete.png">
+                          
                         </div>
+                        <img src=${pokemon.image} class="img-pokemon">
                         <p class="speed">${pokemon.stats.speed}</p>
+                      </div>
                     `;
               })
               .join('');
           }),
         );
         this.innerHTML =  `
-                          <div class="pokedex">
-                            <div class="pokemonCard" style="display: flex;">
-                              ${pokedexData}
-                            </div>
+                          <div class="pokedex">  
+                              ${pokedexData}   
                           </div>
                         `;
     } 

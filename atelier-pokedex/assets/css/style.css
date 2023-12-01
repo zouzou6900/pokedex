@@ -217,4 +217,53 @@ main-footer footer .users .userCard .nbrPkm {
   color: white;
 }
 
+.pokedex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  position: relative;
+  justify-content: space-evenly;
+}
+.pokedex .pokemonCard .title {
+  background-color: #faf9f6;
+  width: 170px;
+  display: flex;
+  margin-left: 15px;
+  padding: 10px;
+  border-radius: 25px 25px 0 0;
+  border: solid;
+}
+.pokedex .pokemonCard .id-pokemon {
+  float: left;
+  margin-right: 30px;
+}
+.pokedex .pokemonCard .name-pokemon {
+  float: right;
+  margin-right: 25px;
+  text-align: center;
+}
+.pokedex .pokemonCard .img-pokemon {
+  height: 190px;
+  margin-left: 15px;
+  background-color: #faf9f6;
+  border: solid;
+  border-top: none;
+}
+.pokedex .pokemonCard .favoris {
+  width: auto;
+  height: 15px;
+  margin-top: 15px;
+  margin-right: 2px;
+}
+.pokedex .pokemonCard .delete {
+  width: auto;
+  height: 15px;
+  margin-top: 15px;
+}
+.pokedex .pokemonCard .speed {
+  position: absolute;
+  margin-left: 180px;
+  margin-top: -23px;
+}
+
 /*# sourceMappingURL=style.css.map */
