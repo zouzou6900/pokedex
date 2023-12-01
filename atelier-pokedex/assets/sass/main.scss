@@ -98,16 +98,35 @@ body {
         width:100%;
         
         
-      thead{
-        background-color: #ffcb08;
-        th{
-          padding:20px;
-          text-align: left;
-          &:first-child{
-            border-radius: 20px 0 0 0;
+        thead{
+          background-color: #ffcb08;
+          th{
+            padding:20px;
+            text-align: left;
+            &:first-child{
+              border-radius: 20px 0 0 0;
+            }
+            &:last-child{
+              border-radius: 0 20px 0 0;
+            }
           }
-          &:last-child{
-            border-radius: 0 20px 0 0;
+        }
+        tbody{
+          background-color: #efefef;
+          tr{
+            cursor: pointer;
+            td{
+              padding:20px;
+              text-align: left;
+              
+              &:last-child{
+                border-right: 0;
+                
+              }
+            }
+            &:hover{
+              background-color: #ccc;
+            }
           }
         }
       }
@@ -328,5 +347,5 @@ body {
       }
     }
   }
-}
+
   

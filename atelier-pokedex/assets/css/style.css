@@ -111,28 +111,45 @@ body wild-list table tbody {
 body wild-list table tbody tr {
   cursor: pointer;
 }
-body wild-list table tbody tr.lighter-bg {
-  background-color: #efefef;
-}
-body wild-list table tbody tr.darker-bg {
-  background-color: #ddd;
-}
 body wild-list table tbody tr td {
-  line-height: 35px;
-  padding: 10px;
+  padding: 20px;
   text-align: left;
-}
-body wild-list table tbody tr td img {
-  float: left;
-  margin-right: 5px;
 }
 body wild-list table tbody tr td:last-child {
   border-right: 0;
 }
 body wild-list table tbody tr:hover {
+  background-color: #ccc;
+}
+body wild-list tbody {
+  background-color: #efefef;
+}
+body wild-list tbody tr {
+  cursor: pointer;
+}
+body wild-list tbody tr.lighter-bg {
+  background-color: #efefef;
+}
+body wild-list tbody tr.darker-bg {
+  background-color: #ddd;
+}
+body wild-list tbody tr td {
+  line-height: 35px;
+  padding: 10px;
+  text-align: left;
+}
+body wild-list tbody tr td img {
+  float: left;
+  margin-right: 5px;
+}
+body wild-list tbody tr td:last-child {
+  border-right: 0;
+}
+body wild-list tbody tr:hover {
   background-color: rgba(255, 203, 8, 0.3);
 }
-body .captureModal {
+
+.captureModal {
   position: fixed;
   padding: 30px;
   background: white;
@@ -144,28 +161,28 @@ body .captureModal {
   box-shadow: 0px 0px 30px black;
   text-align: center;
 }
-body .captureModal div div {
+.captureModal div div {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
-body .captureModal p {
+.captureModal p {
   background-color: #ddd;
   padding: 10px;
   text-align: center;
   margin: 0;
   border-radius: 10px;
 }
-body .captureModal p:first-child {
+.captureModal p:first-child {
   background-color: lightgreen;
 }
-body .captureModal p.modal-msg {
+.captureModal p.modal-msg {
   margin-bottom: 15px;
 }
-body .captureModal img {
+.captureModal img {
   max-width: 400px;
 }
-body .captureModal #btn-back {
+.captureModal #btn-back {
   border: 0;
   color: lightcoral;
   font-size: 45px;
@@ -173,10 +190,10 @@ body .captureModal #btn-back {
   padding: 0;
   cursor: pointer;
 }
-body .captureModal #btn-back:hover {
+.captureModal #btn-back:hover {
   color: red;
 }
-body .captureModal #btn-capture {
+.captureModal #btn-capture {
   border: 0;
   color: lightcoral;
   float: right;
@@ -186,15 +203,16 @@ body .captureModal #btn-capture {
   padding: 0;
   cursor: pointer;
 }
-body .captureModal #btn-capture:hover {
+.captureModal #btn-capture:hover {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
-body .captureModal #btn-capture img {
+.captureModal #btn-capture img {
   width: 47px;
   margin-top: 10px;
 }
-body button.refreshList {
+
+button.refreshList {
   display: block;
   position: absolute;
   right: 50%;
@@ -208,13 +226,14 @@ body button.refreshList {
   z-index: 0;
   cursor: pointer;
 }
-body button.refreshList:hover {
+button.refreshList:hover {
   background: #ffab08;
 }
-body button.refreshList .refresh-img {
+button.refreshList .refresh-img {
   width: 30px;
 }
-body main-history {
+
+main-history {
   background: white;
   padding: 10px 20px;
   display: block;
@@ -224,44 +243,45 @@ body main-history {
   padding: 25px 25px;
   box-shadow: 0px 0px 30px black;
 }
-body main-history .history-table {
+main-history .history-table {
   background-color: white;
   width: 100%;
   border-spacing: 1px;
   width: 100%;
   font-size: 12px;
 }
-body main-history .history-table thead th {
+main-history .history-table thead th {
   background: #ffcb08;
   line-height: 35px;
   padding: 0px 10px;
   text-align: left;
 }
-body main-history .history-table thead th:first-child {
+main-history .history-table thead th:first-child {
   border-radius: 15px 0 0 0;
 }
-body main-history .history-table thead th:last-child {
+main-history .history-table thead th:last-child {
   border-radius: 0 15px 0 0;
 }
-body main-history .history-table tbody {
+main-history .history-table tbody {
   background-color: #eee;
 }
-body main-history .history-table tbody tr {
+main-history .history-table tbody tr {
   cursor: pointer;
 }
-body main-history .history-table tbody tr td {
+main-history .history-table tbody tr td {
   line-height: 35px;
   padding: 0px 10px;
   text-align: left;
 }
-body main-footer {
+
+main-footer {
   background: #003da1;
   display: block;
   position: fixed;
   bottom: 0;
   width: 100%;
 }
-body main-footer footer {
+main-footer footer {
   padding: 25px;
   display: flex;
   width: 980px;
@@ -269,16 +289,16 @@ body main-footer footer {
   margin: 0 auto;
   color: white;
 }
-body main-footer footer .users {
+main-footer footer .users {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
-body main-footer footer .users a {
+main-footer footer .users a {
   width: 25%;
   text-decoration: none;
 }
-body main-footer footer .users .userCard {
+main-footer footer .users .userCard {
   text-transform: uppercase;
   color: #ffcb08;
   position: relative;
@@ -287,22 +307,22 @@ body main-footer footer .users .userCard {
   background-color: #003eaf;
   border-radius: 15px;
 }
-body main-footer footer .users .userCard img {
+main-footer footer .users .userCard img {
   width: 35px;
 }
-body main-footer footer .users .userCard h4 {
+main-footer footer .users .userCard h4 {
   margin: 10px 0 10px 0;
 }
-body main-footer footer .users .userCard .nbrPkm {
+main-footer footer .users .userCard .nbrPkm {
   text-transform: none;
   color: white;
 }
-body main-footer footer .users .currentUser {
+main-footer footer .users .currentUser {
   background-color: #ffcb08;
   border-radius: 15px;
   color: black;
 }
-body main-footer footer .users .currentUser .nbrPkm {
+main-footer footer .users .currentUser .nbrPkm {
   text-transform: none;
   color: #555;
 }
