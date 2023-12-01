@@ -56,4 +56,25 @@ export function displayCaptureModal(event) {
 
   modalContainer.innerHTML = captureMarkUp;
   body.appendChild(modalContainer);
+
+  document.getElementById('btn-back').addEventListener('click', (event) => {
+    event.target.parentNode.parentNode.parentNode.parentNode.remove();
+  });
+
+  document.getElementById('btn-capture').addEventListener('click', () => {
+    capturePokemon(pkmIndex, pkmData);
+  });
 }
+
+export function handleUserSelectedEvent(event) {
+  const activeUser = event.detail;
+  console.log('Utilisateur actif dans main.js :', activeUser);
+
+  const userHeader = document.getElementById('activeUserDisplay');
+  userHeader.innerHTML = `
+    Salut ${activeUser}`;
+}
+
+document
+  .querySelector('main-footer')
+  .addEventListener('userSelected', handleUserSelectedEvent);

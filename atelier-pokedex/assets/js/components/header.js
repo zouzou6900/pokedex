@@ -1,7 +1,7 @@
 export default class Header extends HTMLElement {
-    connectedCallback() {
-      const current = this.getAttribute('current');
-      this.innerHTML = `<header>
+  connectedCallback() {
+    const current = this.getAttribute('current');
+    this.innerHTML = `<header>
         <a href="./" class="logo"><img src="public/img/logo-banner.png" alt="logo pokemon"></a>
         <nav>
           <ul>
@@ -17,9 +17,11 @@ export default class Header extends HTMLElement {
           </ul>
         </nav>
         <div class="counter">
+            <div id="activeUserDisplay"></div>
             <p class="catch">50</p>
             <p class="notCatch">20</p>
         </div>
+        
         </header>`;
-    }
   }
+}
