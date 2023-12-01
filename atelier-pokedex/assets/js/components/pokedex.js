@@ -7,7 +7,7 @@ export default class Pokedex extends HTMLElement {
                 return `
                       <div class="pokemonCard">
                         <div class="title">
-                          <p class="id-pokemon">${pokemon.pokedexId}</p>
+                          <p class="id-pokemon">N°${pokemon.pokedexId}</p>
                           <p class="name-pokemon">${pokemon.name}</p>
                           <img class="favoris" src="./public/img/favoris.png" >
                           <img class="delete" src="./public/img/delete.png">

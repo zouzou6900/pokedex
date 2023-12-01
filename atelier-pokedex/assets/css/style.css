@@ -223,10 +223,16 @@ main-footer footer .users .userCard .nbrPkm {
   margin-top: 15px;
   position: relative;
   justify-content: space-evenly;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+.pokedex .pokemonCard {
+  margin-top: 5px;
+  margin-bottom: 25px;
 }
 .pokedex .pokemonCard .title {
   background-color: #faf9f6;
-  width: 170px;
+  width: 200px;
   display: flex;
   margin-left: 15px;
   padding: 10px;
@@ -235,15 +241,16 @@ main-footer footer .users .userCard .nbrPkm {
 }
 .pokedex .pokemonCard .id-pokemon {
   float: left;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 .pokedex .pokemonCard .name-pokemon {
-  float: right;
   margin-right: 25px;
+  margin-left: 10px;
   text-align: center;
+  text-shadow: 0px 9px 4px rgba(204, 200, 206, 0.95);
 }
 .pokedex .pokemonCard .img-pokemon {
-  height: 190px;
+  height: 220px;
   margin-left: 15px;
   background-color: #faf9f6;
   border: solid;
@@ -262,7 +269,7 @@ main-footer footer .users .userCard .nbrPkm {
 }
 .pokedex .pokemonCard .speed {
   position: absolute;
-  margin-left: 180px;
+  margin-left: 210px;
   margin-top: -23px;
 }
 
