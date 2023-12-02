@@ -4,7 +4,6 @@ export default class Pokedex extends HTMLElement {
     .then((response) => response.json()
     .then((data) => { 
       return data.map((pokemon) => {
-        
             return `
                   <div class="pokemonCard">
                     <div class="title">
@@ -15,7 +14,7 @@ export default class Pokedex extends HTMLElement {
                         <img class="delete" src="./public/img/delete.png">
                       </div>
                     </div>
-                    <img src="${pokemon.image}" class="img-pokemon">
+                    <img src=${pokemon.image} class="img-pokemon">
                     <p class="speed"><img class="speed-img" src="./public/img/vitesse.png"> ${pokemon.stats.speed}</p>
                   </div>
                 `;
