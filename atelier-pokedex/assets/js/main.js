@@ -1,48 +1,60 @@
-export function randomNumber(max) {
+
+export function randomNumber(max){
   return Math.floor(Math.random() * (max + 1));
 }
 
 export function generateWildList() {
   const isWildListStored = JSON.parse(localStorage.getItem('wildList'));
-
-  fetch('https://pokebuildapi.fr/api/v1/pokemon')
-    .then((response) => response.json())
-    .then((data) => {
+  
+  fetch("https://pokebuildapi.fr/api/v1/pokemon")
+  .then((response) => response.json())
+  .then((data) => {
       const clearList = [];
       for (let i = 0; i < 50; i++) {
-        const rand = randomNumber(898);
-        const pokemonData = data[rand];
-        const pokemon = {
-          pokedexId: pokemonData.pokedexId,
-          name: pokemonData.name,
-          type: pokemonData.apiTypes,
-          stats: pokemonData.stats,
-          image: pokemonData.image,
-          sprite: pokemonData.sprite,
-        };
-        clearList.push(pokemon);
+          const rand = randomNumber(898);
+          const pokemonData = data[rand];
+          const pokemon = {
+              "pokedexId": pokemonData.pokedexId,
+              "name" : pokemonData.name,
+              "type": pokemonData.apiTypes,
+              "stats" : pokemonData.stats,
+              "image" : pokemonData.image,
+              "sprite" : pokemonData.sprite,
+          }
+          clearList.push(pokemon); 
       }
-      if (!isWildListStored) {
-        localStorage.setItem('wildList', JSON.stringify(clearList));
-        generateWildList();
+      if(!isWildListStored){
+          localStorage.setItem("wildList", JSON.stringify(clearList));
+          generateWildList()
       }
 
-      if (isWildListStored) {
-        localStorage.setItem('wildTemp', JSON.stringify(clearList));
+      if(isWildListStored){
+          localStorage.setItem("wildTemp", JSON.stringify(clearList));
       }
-    });
+  })
 }
 
-export function swapStorage() {
+export function swapStorage(){
   const test2 = JSON.parse(localStorage.getItem('wildTemp'));
-  localStorage.setItem('wildList', JSON.stringify(test2));
-  generateWildList();
+  localStorage.setItem("wildList", JSON.stringify(test2));
+  generateWildList()
 }
 
 export function displayCaptureModal(event) {
   const pkmIndex = event.target.parentNode.getAttribute('index');
   const pkmData = JSON.parse(localStorage.getItem('wildList'))[pkmIndex];
   const body = document.querySelector('body');
+//Création d'une div.layer qui englobe la div.captureModal, si on clique dessus 
+//en dehors de la fenêtre div.captureModal, on remove la modale 
+//Ca foutait le bordel en utilisant le body (Steve)
+  const layer = document.createElement('div');
+  layer.classList.add('layer');
+  layer.addEventListener('click', (event) => {
+    if (!event.target.closest('.captureModal')) {
+      layer.remove();
+    }
+  });
+
   const modalContainer = document.createElement('div');
   modalContainer.classList.add('captureModal');
   modalContainer.setAttribute('index', `${pkmIndex}`);
@@ -53,17 +65,32 @@ export function displayCaptureModal(event) {
         <button id="btn-back" class="fa-solid"><i class="fa-solid fa-circle-arrow-left"></i></button>
         <button id="btn-capture"><img src="./public/img/pokeball.png" alt="Capturer Pokemon"></button>
     </div>`;
-
   modalContainer.innerHTML = captureMarkUp;
-  body.appendChild(modalContainer);
-
+  body.appendChild(layer);
+  layer.appendChild(modalContainer);
+  
   document.getElementById('btn-back').addEventListener('click', (event) => {
-    event.target.parentNode.parentNode.parentNode.parentNode.remove();
+    layer.remove();
   });
-
   document.getElementById('btn-capture').addEventListener('click', () => {
     capturePokemon(pkmIndex, pkmData);
   });
+}
+
+
+function capturePokemon(event,pkmIndex,pkmData){
+  const userId = "";
+  const pokemon = pkmData;
+  getOneUser(3)
+
+}
+
+function getOneUser(id){
+  const user = fetch(`http://localhost:3000/users/${id}`)
+  .then((response)=> response.json())
+  .then((data) =>{
+      console.log(data);
+  })
 }
 
 export function handleUserSelectedEvent(event) {
@@ -83,3 +110,4 @@ document.addEventListener('DOMContentLoaded', () => {
     userHeader.innerHTML = `<img src="./public/img/${storedActiveUser}.png" alt="" />`;
   }
 });
+
