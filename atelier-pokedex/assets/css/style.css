@@ -327,4 +327,83 @@ main-footer footer .users .currentUser .nbrPkm {
   color: #555;
 }
 
+.pokedex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  position: relative;
+  justify-content: space-evenly;
+  margin-left: 160px;
+  margin-right: 160px;
+}
+.pokedex .pokemonCard {
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+.pokedex .pokemonCard .title {
+  background-color: #faf9f6;
+  width: 220px;
+  display: flex;
+  justify-items: center;
+  margin-left: 15px;
+  padding: 10px;
+  border-radius: 25px 25px 0 0;
+  border: solid;
+}
+.pokedex .pokemonCard .title .btn-pokedex {
+  display: flex;
+  justify-content: end;
+}
+.pokedex .pokemonCard .title button {
+  border: none;
+  background-color: transparent;
+  margin-top: -15px;
+}
+.pokedex .pokemonCard .id-pokemon {
+  float: left;
+  margin-right: 20px;
+}
+.pokedex .pokemonCard .name-pokemon {
+  margin-right: 25px;
+  margin-left: 10px;
+  text-align: center;
+  text-shadow: 0px 9px 4px rgba(204, 200, 206, 0.95);
+}
+.pokedex .pokemonCard .img-pokemon {
+  height: 240px;
+  margin-left: 15px;
+  background-color: #faf9f6;
+  border: solid;
+  border-top: none;
+}
+.pokedex .pokemonCard .btn-pokedex {
+  width: 50px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2px;
+}
+.pokedex .pokemonCard .favoris {
+  width: auto;
+  height: 15px;
+  margin-top: 0px;
+  margin-right: 2px;
+}
+.pokedex .pokemonCard .delete {
+  width: auto;
+  height: 19px;
+  margin-top: -2px;
+}
+.pokedex .pokemonCard .speed {
+  position: absolute;
+  margin-left: 200px;
+  margin-top: -54px;
+}
+.pokedex .pokemonCard .speed .speed-img {
+  height: 15px;
+  margin-top: 30px;
+}
+.pokedex .casper {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */

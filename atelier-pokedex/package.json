@@ -1,12 +1,13 @@
 {
-  "name": "tpk-sass-base",
+  "name": "atelier-pokedex",
   "version": "1.0.0",
-  "description": "",
+  "description": "Travail de groupe",
   "scripts": {
-    "dev": "sass --watch ./assets/sass/main.scss:./assets/css/style.css"
+    "dev": "sass --watch ./assets/sass/main.scss:./assets/css/style.css",
+    "serve": "json-server --watch db.json"
   },
   "keywords": [],
-  "author": "",
+  "author": "Amaury, Steve et Amand",
   "license": "ISC",
   "dependencies": {
     "sass": "^1.49.7"
