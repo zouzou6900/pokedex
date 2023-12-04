@@ -2,7 +2,6 @@
   "users": [
     {
       "name": "Amaury",
-<<<<<<< HEAD
       "catch": 0,
       "escape": 0,
       "id": 1,
@@ -21,26 +20,6 @@
       "escape": 0,
       "id": 3,
       "img" : "./public/img/carapuce.png"
-=======
-      "img": "./public/img/bulbizarre.png",
-      "catch": 0,
-      "escape": 0,
-      "id": 1
-    },
-    {
-      "name": "Steve",
-      "img": "./public/img/salameche.png",
-      "catch": 0,
-      "escape": 0,
-      "id": 2
-    },
-    {
-      "name": "Amand",
-      "img": "./public/img/carapuce.png",
-      "catch": 0,
-      "escape": 0,
-      "id": 3
->>>>>>> steve
     }
   ],
   "pokedex": [
@@ -66,7 +45,6 @@
         "special_defense": 65,
         "speed": 45
       },
-<<<<<<< HEAD
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
       "sprite": "",
       "ownerId": 3
@@ -94,9 +72,162 @@
         "speed": 45
       },
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
-=======
-      "image": "",
->>>>>>> steve
+      "sprite": "",
+      "ownerId": 3
+    },
+    {
+      "id": 1,
+      "pokedexId": 1,
+      "name": "Bulbizarre",
+      "type": [
+        {
+          "name": "Plante",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c5/Grass.png"
+        },
+        {
+          "name": "Poison",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/0/05/Poison.png"
+        }
+      ],
+      "stats": {
+        "hp": 45,
+        "attack": 49,
+        "defense": 49,
+        "special_attack": 65,
+        "special_defense": 65,
+        "speed": 45
+      },
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+      "sprite": "",
+      "ownerId": 3
+    },
+    {
+      "id": 2,
+      "pokedexId": 2,
+      "name": "herbizarre",
+      "type": [
+        {
+          "name": "Plante",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c5/Grass.png"
+        },
+        {
+          "name": "Poison",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/0/05/Poison.png"
+        }
+      ],
+      "stats": {
+        "hp": 45,
+        "attack": 49,
+        "defense": 49,
+        "special_attack": 65,
+        "special_defense": 65,
+        "speed": 45
+      },
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
+      "sprite": "",
+      "ownerId": 3
+    },
+    {
+      "id": 1,
+      "pokedexId": 1,
+      "name": "Bulbizarre",
+      "type": [
+        {
+          "name": "Plante",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c5/Grass.png"
+        },
+        {
+          "name": "Poison",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/0/05/Poison.png"
+        }
+      ],
+      "stats": {
+        "hp": 45,
+        "attack": 49,
+        "defense": 49,
+        "special_attack": 65,
+        "special_defense": 65,
+        "speed": 45
+      },
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+      "sprite": "",
+      "ownerId": 3
+    },
+    {
+      "id": 2,
+      "pokedexId": 2,
+      "name": "herbizarre",
+      "type": [
+        {
+          "name": "Plante",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c5/Grass.png"
+        },
+        {
+          "name": "Poison",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/0/05/Poison.png"
+        }
+      ],
+      "stats": {
+        "hp": 45,
+        "attack": 49,
+        "defense": 49,
+        "special_attack": 65,
+        "special_defense": 65,
+        "speed": 45
+      },
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
+      "sprite": "",
+      "ownerId": 3
+    },
+    {
+      "id": 1,
+      "pokedexId": 1,
+      "name": "Bulbizarre",
+      "type": [
+        {
+          "name": "Plante",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c5/Grass.png"
+        },
+        {
+          "name": "Poison",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/0/05/Poison.png"
+        }
+      ],
+      "stats": {
+        "hp": 45,
+        "attack": 49,
+        "defense": 49,
+        "special_attack": 65,
+        "special_defense": 65,
+        "speed": 45
+      },
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+      "sprite": "",
+      "ownerId": 3
+    },
+    {
+      "id": 2,
+      "pokedexId": 200,
+      "name": "herbizarre",
+      "type": [
+        {
+          "name": "Plante",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/c/c5/Grass.png"
+        },
+        {
+          "name": "Poison",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/0/05/Poison.png"
+        }
+      ],
+      "stats": {
+        "hp": 45,
+        "attack": 49,
+        "defense": 49,
+        "special_attack": 65,
+        "special_defense": 65,
+        "speed": 450
+      },
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
       "sprite": "",
       "ownerId": 3
     }
