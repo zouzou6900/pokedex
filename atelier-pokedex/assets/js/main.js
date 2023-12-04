@@ -1,3 +1,4 @@
+import { setHistory } from "./history-functions.js";
 
 export function randomNumber(max){
     return Math.floor(Math.random() * (max + 1));
@@ -81,6 +82,11 @@ function capturePokemon(pkmData,pkmIndex){
     const pokemon = pkmData;
     const userData = getOneUser(userId);
     const isCaptured = calculateCaptureChance(pokemon,userData);
+    const log = {
+        "name":userData.name,
+        "date": new Date().toLocaleDateString('fr-FR'),
+        "hour": new Date().toLocaleTimeString('fr-FR'),
+    }
 
     if(isCaptured === false){
         row.remove();
@@ -88,11 +94,15 @@ function capturePokemon(pkmData,pkmIndex){
         modalMsg.style.backgroundColor = "red";
         userData.escape +=1;
         updateOneUser(userId, userData);
+        log.message = `${pokemon.name} s'enfuit.`;
+        setHistory(log);
     }else{
         row.remove()
         modalMsg.innerText = `Vous avez capturé ${pokemon.name}`;
         modalMsg.style.backgroundColor = "green";
         pokemon.ownerId = Number(userId);
+        pokemon.favoris = "";
+        pokemon.comment = "";
         userData.total +=1;
         userData.catch +=1;
 
@@ -105,6 +115,8 @@ function capturePokemon(pkmData,pkmIndex){
         });
 
         updateOneUser(userId, userData);
+        log.message = `Capture ${pokemon.name}.`;
+        setHistory(log);
     }
     
 }
@@ -145,12 +157,18 @@ function updateOneUser(id, updatedData) {
 
 export function handleUserSelectedEvent(event) {
     const activeUser = event.detail;
-  
+    console.log('Utilisateur actif dans main.js :', activeUser);
+    localStorage.setItem('activeUser', activeUser);
     const userHeader = document.getElementById('activeUserDisplay');
-    userHeader.innerHTML = `
-      Salut ${activeUser}`;
+    userHeader.innerHTML = `<img src="./public/img/${activeUser}.png" alt="" />`;
   }
-  
   document
     .querySelector('main-footer')
     .addEventListener('userSelected', handleUserSelectedEvent);
+  document.addEventListener('DOMContentLoaded', () => {
+    const storedActiveUser = localStorage.getItem('activeUser');
+    if (storedActiveUser) {
+      const userHeader = document.getElementById('activeUserDisplay');
+      userHeader.innerHTML = `<img src="./public/img/${storedActiveUser}.png" alt="" />`;
+    }
+  });

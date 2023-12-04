@@ -1,5 +1,106 @@
 {
   "pokedex": [
-    
+    {
+      "pokedexId": 361,
+      "name": "Stalgamin",
+      "type": [
+        {
+          "name": "Glace",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/7/77/Ice.png"
+        }
+      ],
+      "stats": {
+        "HP": 50,
+        "attack": 50,
+        "defense": 50,
+        "special_attack": 50,
+        "special_defense": 50,
+        "speed": 50
+      },
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/361.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/361.png",
+      "ownerId": 2,
+      "id": 1
+    },
+    {
+      "pokedexId": 607,
+      "name": "Funécire",
+      "type": [
+        {
+          "name": "Spectre",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/a/ab/Ghost.png"
+        },
+        {
+          "name": "Feu",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/3/30/Fire.png"
+        }
+      ],
+      "stats": {
+        "HP": 50,
+        "attack": 30,
+        "defense": 55,
+        "special_attack": 65,
+        "special_defense": 55,
+        "speed": 20
+      },
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/607.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/607.png",
+      "ownerId": 2,
+      "favoris": "",
+      "comment": "",
+      "id": 2
+    },
+    {
+      "pokedexId": 340,
+      "name": "Barbicha",
+      "type": [
+        {
+          "name": "Sol",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/8/8f/Ground.png"
+        },
+        {
+          "name": "Eau",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/9/9d/Water.png"
+        }
+      ],
+      "stats": {
+        "HP": 110,
+        "attack": 78,
+        "defense": 73,
+        "special_attack": 76,
+        "special_defense": 71,
+        "speed": 60
+      },
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/340.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/340.png",
+      "ownerId": 2,
+      "favoris": "",
+      "comment": "",
+      "id": 3
+    },
+    {
+      "pokedexId": 190,
+      "name": "Capumain",
+      "type": [
+        {
+          "name": "Normal",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/f/fb/Normal.png"
+        }
+      ],
+      "stats": {
+        "HP": 55,
+        "attack": 70,
+        "defense": 55,
+        "special_attack": 40,
+        "special_defense": 55,
+        "speed": 85
+      },
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/190.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/190.png",
+      "ownerId": 3,
+      "favoris": "",
+      "comment": "",
+      "id": 4
+    }
   ]
 }

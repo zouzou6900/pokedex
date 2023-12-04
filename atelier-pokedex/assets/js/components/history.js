@@ -1,5 +1,8 @@
+import { getHistory } from "../history-functions.js";
+
 export default class Header extends HTMLElement {
   connectedCallback() {
+    const history = getHistory();
     this.innerHTML = `<table class="history-table">
       <thead><tr>
       <th>Date</th>
@@ -8,30 +11,16 @@ export default class Header extends HTMLElement {
       <th>Info</th>
       </tr></thead>
       <tbody>
-      <tr>
-      <td class="date">29/11/2023</td>
-      <td class="time">14h59</td>
-      <td>Amand</td>
-      <td>Lorem ipsume truc bidule machin</td>
-      </tr>
-      <tr>
-      <td class="date">29/11/2023</td>
-      <td class="time">14h59</td>
-      <td>Amand</td>
-      <td>Lorem ipsume truc bidule machin</td>
-      </tr>
-      <tr>
-      <td class="date">29/11/2023</td>
-      <td class="time">14h59</td>
-      <td>Amand</td>
-      <td>Lorem ipsume truc bidule machin</td>
-      </tr>
-      <tr>
-      <td class="date">29/11/2023</td>
-      <td class="time">14h59</td>
-      <td>Amand</td>
-      <td>Lorem ipsume truc bidule machin</td>
-      </tr>
+      ${history.map((h)=>{
+        return `
+          <tr>
+            <td>${h.date}</td>
+            <td>${h.hour}</td>
+            <td>${h.name}</td>
+            <td>${h.message}</td>
+          </tr>
+        `
+      })}
       </tbody>
       
       </table>`;
