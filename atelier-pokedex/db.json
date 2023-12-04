@@ -1,29 +1,7 @@
 {
-  "users": [
-    {
-      "name": "Amaury",
-      "catch": 0,
-      "escape": 0,
-      "id": 1,
-      "img" : "./public/img/bulbizarre.png"
-    },
-    {
-      "name": "Steve",
-      "catch": 0,
-      "escape": 0,
-      "id": 2,
-      "img" : "./public/img/salameche.png"
-    },
-    {
-      "name": "Amand",
-      "catch": 0,
-      "escape": 0,
-      "id": 3,
-      "img" : "./public/img/carapuce.png"
-    }
-  ],
   "pokedex": [
     {
+<<<<<<< Updated upstream
       "id": 1,
       "pokedexId": 1,
       "name": "Bulbizarre",
@@ -230,6 +208,86 @@
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/2.png",
       "sprite": "",
       "ownerId": 3
+=======
+      "pokedexId": 516,
+      "name": "Flotoutan",
+      "type": [
+        {
+          "name": "Eau",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/9/9d/Water.png"
+        }
+      ],
+      "stats": {
+        "HP": 75,
+        "attack": 98,
+        "defense": 63,
+        "special_attack": 98,
+        "special_defense": 63,
+        "speed": 101
+      },
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/516.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/516.png",
+      "ownerId": 2,
+      "favoris": "",
+      "comment": "",
+      "id": 1
+    },
+    {
+      "pokedexId": 567,
+      "name": "Aéroptéryx",
+      "type": [
+        {
+          "name": "Vol",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/7/7f/Flying.png"
+        },
+        {
+          "name": "Roche",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/0/0b/Rock.png"
+        }
+      ],
+      "stats": {
+        "HP": 75,
+        "attack": 140,
+        "defense": 65,
+        "special_attack": 112,
+        "special_defense": 65,
+        "speed": 110
+      },
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/567.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/567.png",
+      "ownerId": 2,
+      "favoris": "",
+      "comment": "",
+      "id": 2
+    },
+    {
+      "pokedexId": 849,
+      "name": "Salarsen",
+      "type": [
+        {
+          "name": "Poison",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/0/05/Poison.png"
+        },
+        {
+          "name": "Électrik",
+          "image": "https://static.wikia.nocookie.net/pokemongo/images/2/2f/Electric.png"
+        }
+      ],
+      "stats": {
+        "HP": 75,
+        "attack": 98,
+        "defense": 70,
+        "special_attack": 114,
+        "special_defense": 70,
+        "speed": 75
+      },
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/849.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/849.png",
+      "ownerId": 2,
+      "favoris": "",
+      "comment": "",
+      "id": 3
+>>>>>>> Stashed changes
     }
   ]
 }

@@ -4,6 +4,10 @@ body {
   font-family: arial, Helvetica, sans-serif;
   margin: 0;
   position: relative;
+<<<<<<< Updated upstream
+=======
+  min-height: 100vh;
+>>>>>>> Stashed changes
 }
 body header {
   display: flex;
@@ -142,11 +146,16 @@ body wild-list table tbody tr:hover {
   background-color: rgba(255, 203, 8, 0.3);
 }
 body .layer {
+<<<<<<< Updated upstream
   position: absolute;
+=======
+  position: fixed;
+>>>>>>> Stashed changes
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
+<<<<<<< Updated upstream
 }
 body .captureModal {
   position: fixed;
@@ -155,6 +164,18 @@ body .captureModal {
   transform: translate(-50%, -50%);
   padding: 30px;
   background: white;
+=======
+  background: url("../../public/img/bg-modal.jpg");
+  background-size: cover;
+}
+body .captureModal {
+  position: fixed;
+  padding: 30px;
+  background: white;
+  top: 15%;
+  right: 50%;
+  transform: translate(50%);
+>>>>>>> Stashed changes
   width: auto;
   border-radius: 25px;
   box-shadow: 0px 0px 30px black;
@@ -187,6 +208,11 @@ body .captureModal #btn-back {
   font-size: 45px;
   background-color: white;
   padding: 0;
+<<<<<<< Updated upstream
+=======
+  float: left;
+  margin-top: 10px;
+>>>>>>> Stashed changes
   cursor: pointer;
 }
 body .captureModal #btn-back:hover {
@@ -218,7 +244,11 @@ body button.refreshList {
   padding: 10px 25px;
   background: #ffcb08;
   border: 8px solid #fff;
+<<<<<<< Updated upstream
   top: 146px;
+=======
+  top: 145px;
+>>>>>>> Stashed changes
   border-radius: 25px 25px 0 0;
   border-bottom: 0;
   z-index: 0;
@@ -235,10 +265,11 @@ body main-history {
   padding: 10px 20px;
   display: block;
   width: 980px;
-  margin: 50px auto 50px auto;
+  margin: 75px auto 150px auto;
   border-radius: 25px;
   padding: 25px 25px;
   box-shadow: 0px 0px 30px black;
+  margin-bottom: 200px;
 }
 body main-history .history-table {
   background-color: white;
@@ -329,8 +360,14 @@ body main-footer footer .users .currentUser .nbrPkm {
   margin-top: 15px;
   position: relative;
   justify-content: space-evenly;
+<<<<<<< Updated upstream
   margin-left: 160px;
   margin-right: 160px;
+=======
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 170px;
+>>>>>>> Stashed changes
 }
 .pokedex .pokemonCard {
   margin-top: 5px;
@@ -400,6 +437,78 @@ body main-footer footer .users .currentUser .nbrPkm {
 }
 .pokedex .casper {
   display: none;
+<<<<<<< Updated upstream
+=======
+}
+
+.pokedexModal {
+  position: fixed;
+  padding: 30px;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  border-radius: 25px;
+  box-shadow: 0px 0px 30px black;
+  text-align: center;
+}
+.pokedexModal .title {
+  display: flex;
+  background-color: #ffcb08;
+  padding: 10px;
+  align-items: center;
+  border-radius: 15px;
+}
+.pokedexModal .title .pokemonId {
+  width: 30%;
+  text-align: left;
+}
+.pokedexModal .title .pokemonName {
+  width: 40%;
+}
+.pokedexModal .title .pokedexBtn {
+  width: 30%;
+  text-align: end;
+}
+.pokedexModal .title .pokedexBtn img {
+  width: 30px;
+}
+.pokedexModal .pokemon-types {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+.pokedexModal .pokemon-types div {
+  width: 15%;
+}
+.pokedexModal .pokemon-types div p {
+  margin: 0;
+}
+.pokedexModal .pokemon-types img {
+  width: 50px;
+}
+.pokedexModal .pokemon-stats .first-row {
+  display: flex;
+  justify-content: space-between;
+}
+.pokedexModal .pokemon-stats .first-row div {
+  width: 28%;
+  border-radius: 10px;
+  padding: 10px;
+  background: #ddd;
+}
+.pokedexModal .pokemon-stats .second-row {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+.pokedexModal .pokemon-stats .second-row div {
+  width: 28%;
+  border-radius: 10px;
+  padding: 10px;
+  background: #ddd;
+>>>>>>> Stashed changes
 }
 
 /*# sourceMappingURL=style.css.map */
