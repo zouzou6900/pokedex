@@ -356,6 +356,7 @@ body {
   justify-content: space-evenly;
   margin-left: 160px;
   margin-right: 160px;
+  margin-bottom: 100px;
   .pokemonCard{
     margin-top: 5px;
     margin-bottom: 25px;
@@ -425,4 +426,13 @@ body {
   .casper{
     display: none;
   }
-}  
+} 
+
+.layer{
+  position:fixed;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%; 
+  background-size: cover;
+}

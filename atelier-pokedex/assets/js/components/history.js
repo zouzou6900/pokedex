@@ -20,7 +20,7 @@ export default class Header extends HTMLElement {
             <td>${h.message}</td>
           </tr>
         `
-      })}
+      }).reverse().join("")}
       </tbody>
       
       </table>`;

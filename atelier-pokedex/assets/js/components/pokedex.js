@@ -1,3 +1,6 @@
+import { setHistory } from "../history-functions.js";
+import { getOneUser, updateOneUser } from "../main.js";
+
 export default class Pokedex extends HTMLElement {
   async connectedCallback() {
     const activeUser = Number(localStorage.getItem('activeUser'));
@@ -40,6 +43,13 @@ export default class Pokedex extends HTMLElement {
       })
     });
 
+    document.querySelectorAll('.delete').forEach((btn)=>{
+      btn.addEventListener('click',(event)=>{
+        const pkmId = event.target.closest('.pokemonCard').getAttribute('pkmId');
+        releasePokemon(pkmId,event)
+      })
+    })
+
     document.querySelectorAll('.pokemonCard').forEach((card)=>{
       card.addEventListener('click',(event)=>{
         displayPokedexModal(event)
@@ -57,6 +67,28 @@ function changementImg(event){
     event.target.src="./public/img/favoris-modified-gray.png"
     event.target.nextElementSibling.classList.remove('casper')
   }
+}
+
+function releasePokemon(pkmId,event){
+  const pkmName = event.target.parentNode.previousElementSibling.textContent
+  
+  fetch(`http://localhost:3000/pokedex/${pkmId}`,{
+    method: 'DELETE',
+  });
+  const activeUser = Number(localStorage.getItem('activeUser'));
+  const userData = getOneUser(activeUser);
+  const log = {
+    "name":userData.name,
+    "date": new Date().toLocaleDateString('fr-FR'),
+    "hour": new Date().toLocaleTimeString('fr-FR'),
+  }
+  log.message = `Relâche ${pkmName}`;
+  setHistory('activeUser', log)
+
+  userData.total -=1;
+
+
+  updateOneUser(activeUser,userData);
 }
 
 //Fonction à terminer et à réorganiser suivant le visuel voulu

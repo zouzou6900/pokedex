@@ -143,13 +143,13 @@ function calculateCaptureChance(pokemon,userData){
     return capture
 }
 
-function getOneUser(id) {
+export function getOneUser(id) {
     const usersData = JSON.parse(localStorage.getItem('users')) || [];
     const user = usersData.find(u => u.id === id);
     return user;
 }
 
-function updateOneUser(id, updatedData) {
+export function updateOneUser(id, updatedData) {
     const usersData = JSON.parse(localStorage.getItem('users')) || [];
     const updatedUsers = usersData.map(user => (user.id === id ? { ...user, ...updatedData } : user));
     localStorage.setItem('users', JSON.stringify(updatedUsers));
